@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/ShahJe.Sql.Dapper.Extensions/bin/Debug
+/ShahJe.Sql.Dapper.Extensions/obj
+/ShahJe.Sql.Dapper.Extensions/.vs/ShahJe.Sql.Dapper.Extensions/v16
