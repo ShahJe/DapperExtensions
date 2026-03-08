@@ -1,4 +1,4 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
 namespace ShahJe.Sql.Dapper.Extensions.Tests
@@ -7,13 +7,10 @@ namespace ShahJe.Sql.Dapper.Extensions.Tests
     {
         protected const string ConnectionString = @"Data Source=(LocalDb)\MSSQLLocalDB;Initial Catalog=UnitTest;Integrated Security=SSPI;AttachDBFilename={0}\UnitTest.mdf";
 
-        protected string Path => AppDomain.CurrentDomain.GetData("DataDirectory") as string;
+        protected string Path => AppContext.BaseDirectory;
 
         public static void ClassSetup(TestContext context)
         {
-            AppDomain.CurrentDomain.SetData(
-            "DataDirectory",
-            context.TestDeploymentDir);
-        }        
+        }
     }
 }

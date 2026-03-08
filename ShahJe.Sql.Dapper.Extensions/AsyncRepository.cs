@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,7 +17,7 @@ namespace ShahJe.Sql.Dapper.Extensions
 			ConnectionString = sqlConnectionString;
         }
 
-		public async Task<SqlConnection> ConnectionAsync(bool mars = false)
+		public async Task<IDbConnection> ConnectionAsync(bool mars = false)
 		{
 			var connection = new SqlConnection(ConnectionString);
 			await connection.OpenAsync();

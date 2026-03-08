@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Linq;
 
 namespace ShahJe.Sql.Dapper.Extensions
@@ -16,7 +16,7 @@ namespace ShahJe.Sql.Dapper.Extensions
 			ConnectionString = sqlConnectionString;
         }
 
-		public SqlConnection Connection(bool mars = false)
+		public IDbConnection Connection(bool mars = false)
 		{
 			var connection = new SqlConnection(ConnectionString);
 			connection.Open();
