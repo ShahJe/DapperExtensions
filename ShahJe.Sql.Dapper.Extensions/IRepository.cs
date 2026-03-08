@@ -2,13 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace ShahJe.Sql.Dapper.Extensions
 {
 	public interface IRepository
 	{
-		SqlConnection Connection(bool mars = false);
+		IDbConnection Connection(bool mars = false);
 
 		TEntity GetOne<TEntity>(string sql, CommandType commandType = CommandType.StoredProcedure)
 			where TEntity : class;

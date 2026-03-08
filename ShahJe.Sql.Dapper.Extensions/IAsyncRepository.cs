@@ -2,14 +2,14 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 using System.Threading.Tasks;
 
 namespace ShahJe.Sql.Dapper.Extensions
 {
 	public interface IAsyncRepository
 	{
-		Task<SqlConnection> ConnectionAsync(bool mars = false);
+		Task<IDbConnection> ConnectionAsync(bool mars = false);
 
 		Task<TEntity> GetOneAsync<TEntity>(string sql, CommandType commandType = CommandType.StoredProcedure)
 			where TEntity : class;
